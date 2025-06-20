@@ -1,0 +1,134 @@
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 100h;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #0C2A92;
+    font-weight: 500;
+}
+
+form,
+.form-item,
+.form-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-item>input,
+.submit-btn {
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.image-section {
+    border-radius: 45px 0px 0px 45px;
+    background-image: url("https://images.unsplash.com/photo-1525498128493-380d1990a112?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 1042px;
+}
+
+
+.form-section {
+    margin: auto;
+    height: 583px;
+    gap: 20px;
+}
+
+.form-headline {
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.form-headline>h1 {
+    margin: 0;
+}
+
+form {
+    gap: 20px;
+}
+
+.form-item {
+    gap: 5px;
+}
+
+.form-item>label,
+.submit-btn,
+.tp-check,
+.remember-login {
+    font-weight: 600;
+}
+
+.form-item>input {
+    border: 1px solid grey;
+}
+
+
+.label-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.submit-btn {
+    width: 100%;
+    background-color: #3A5B22;
+    color: white;
+
+}
+
+.section-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.section-divider::before,
+.section-divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+}
+
+.section-divider span {
+    padding: 0 12px;
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.btn-group {
+    display: flex;
+    gap: 23px;
+}
+
+.btn-group>button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 20px;
+    gap: 10px;
+    width: 190px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid #D9D9D9;
+}
+
+.signup-link {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-group>button>img {
+    width: 24px;
+    height: 24px;
+}
