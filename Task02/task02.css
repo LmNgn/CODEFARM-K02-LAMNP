@@ -5,5 +5,247 @@
 }
 
 html {
-    background-color: cream;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    background-image:
+        url("./images/wave.png"),
+        linear-gradient(293deg, #E6E6E4 7.23%, #F0E8E2 97.74%);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding: 40px 120px;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    ul {
+        display: inline-flex;
+        justify-content: space-between;
+        gap: 20px;
+        list-style: none;
+
+        li>a {
+            text-decoration: none;
+            color: black;
+        }
+
+        li>a:hover {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            text-decoration-thickness: 2px;
+
+        }
+    }
+
+    .signin-btn {
+        border: 1px solid black;
+        padding: 5px 15px;
+        border-radius: 6px;
+        transition: background-color ease-in 0.4s;
+        cursor: pointer;
+    }
+
+    .signin-btn:hover {
+        background: rgb(230, 230, 230);
+    }
+}
+
+.banner {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+
+    .banner-describe {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        h1 {
+            font-size: 55px;
+        }
+
+        p {
+            color: #9B948E;
+            font-size: 16px;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: black;
+            border-radius: 6px;
+            background: var(--green, #96C67F);
+            width: 170px;
+            height: 50px;
+            transition: all ease-in 0.3s;
+        }
+
+        a:hover {
+            background: var(--green, #78af5e);
+
+        }
+    }
+
+    .banner-img {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        .teacher-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+
+        .teacher-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+            font-size: 16px;
+            position: relative;
+            background-color: white;
+            border-radius: 20px;
+            width: 180px;
+            height: 130px;
+            bottom: 100px;
+            left: 30px;
+        }
+
+        .teacher-detail>span {
+            font-size: 14px;
+            color: #9B948E;
+        }
+
+        .teacher-rate>img {
+            width: 24px;
+        }
+
+        button {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(50%, -100%);
+            width: 80px;
+            height: 80px;
+            border: none;
+            background-color: black;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+
+            img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        button:hover {
+            transform: translate(50%, -100%) scale(1.1);
+        }
+    }
+
+}
+
+.banner-describe,
+.banner-img {
+    flex: 1;
+}
+
+.trusted-company {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+
+    p {
+        text-align: center;
+    }
+
+    .comapany-list {
+        display: flex;
+        gap: 60px;
+        justify-content: center;
+
+        img {
+            height: 30px;
+        }
+    }
+}
+
+.teacher-list {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+
+    .list-header {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+
+        p {
+            font-size: 18px;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 600;
+
+            span {
+                text-decoration: underline;
+                text-decoration-color: #96C67F;
+                text-decoration-thickness: 5px;
+            }
+        }
+    }
+
+    .list-content {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    .list-item {
+        width: 295px;
+        height: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+            height: 300px;
+
+        }
+
+        .item-detail {
+            background-color: white;
+            padding: 20px;
+
+            p {
+                font-size: 18px;
+            }
+
+            span {
+                font-size: 16px;
+                color: #9B948E;
+            }
+
+
+        }
+    }
 }
