@@ -136,7 +136,7 @@ header {
             position: absolute;
             right: 0;
             top: 50%;
-            transform: translate(50%, -100%);
+            transform: translate(50%, -150%);
             width: 80px;
             height: 80px;
             border: none;
@@ -152,7 +152,7 @@ header {
         }
 
         button:hover {
-            transform: translate(50%, -100%) scale(1.1);
+            transform: translate(50%, -150%) scale(1.1);
         }
     }
 
