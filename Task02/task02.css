@@ -49,7 +49,7 @@ header {
             content: "";
             border: 1px solid black;
             position: absolute;
-            width: 100%;
+            width: 95%;
             bottom: 0;
             left: 0;
             transform: scaleX(0);
@@ -82,6 +82,8 @@ header {
     display: flex;
     flex-direction: row;
     gap: 50px;
+    height: 90vh;
+    width: 100%;
 
     .banner-describe {
         display: flex;
@@ -155,7 +157,7 @@ header {
             position: absolute;
             right: 0;
             top: 50%;
-            transform: translate(50%, -150%);
+            transform: translate(50%, -50%);
             width: 80px;
             height: 80px;
             border: none;
@@ -171,7 +173,7 @@ header {
         }
 
         button:hover {
-            transform: translate(50%, -150%) scale(1.1);
+            transform: translate(50%, -50%) scale(1.1);
         }
     }
 
@@ -270,6 +272,7 @@ header {
 
             span {
                 font-size: 16px;
+                text-wrap: nowrap;
                 color: #9B948E;
             }
 
