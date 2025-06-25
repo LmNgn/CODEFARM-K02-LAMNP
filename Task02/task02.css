@@ -28,7 +28,7 @@ header {
     align-items: center;
 
     ul {
-        display: inline-flex;
+        display: flex;
         justify-content: space-between;
         gap: 20px;
         list-style: none;
@@ -36,13 +36,30 @@ header {
         li>a {
             text-decoration: none;
             color: black;
+            position: relative;
+            /* transition: all 0.2s; */
         }
 
-        li>a:hover {
-            text-decoration: underline;
-            text-underline-offset: 4px;
-            text-decoration-thickness: 2px;
+        /* li>a:hover {
+            font-weight: 400;
+            transform: scale(1.01);
+        } */
 
+        li>a::after {
+            content: "";
+            border: 1px solid black;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            transform: scaleX(0);
+            transition: all ease-in 0.2s;
+            transform-origin: left;
+            border-radius: 2px;
+        }
+
+        li>a:hover::after {
+            transform: scaleX(1);
         }
     }
 
@@ -50,12 +67,14 @@ header {
         border: 1px solid black;
         padding: 5px 15px;
         border-radius: 6px;
-        transition: background-color ease-in 0.4s;
+        transition: all ease-in 0.2s;
         cursor: pointer;
+
     }
 
     .signin-btn:hover {
-        background: rgb(230, 230, 230);
+        background: rgb(214, 197, 197);
+
     }
 }
 
@@ -201,14 +220,23 @@ header {
 
         h1 {
             font-size: 32px;
-            font-weight: 600;
 
             span {
-                text-decoration: underline;
-                text-decoration-color: #96C67F;
-                text-decoration-thickness: 5px;
+                position: relative;
+                z-index: 1;
+            }
+
+            span::after {
+                content: "";
+                border: 3px solid #96C67F;
+                position: absolute;
+                width: 95%;
+                bottom: 7px;
+                left: 0;
+                z-index: -1;
             }
         }
+
     }
 
     .list-content {
