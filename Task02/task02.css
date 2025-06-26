@@ -7,14 +7,16 @@
 html {
     font-family: "Poppins", sans-serif;
     font-size: 16px;
-}
-
-.container {
     background-image:
         url("./images/wave.png"),
         linear-gradient(293deg, #E6E6E4 7.23%, #F0E8E2 97.74%);
     background-repeat: no-repeat;
     background-position: top left;
+}
+
+.container {
+    max-width: 1440px;
+
     background-size: auto;
     display: flex;
     flex-direction: column;
