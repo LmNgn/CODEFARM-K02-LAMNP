@@ -1,0 +1,810 @@
+@font-face {
+    font-family: 'satoshi';
+    src: url('../fonts/Satoshi/Fonts/OTF/Satoshi-Regular.otf');
+}
+
+@font-face {
+    font-family: 'integral';
+    src: url('../fonts/Integral-CF/Fontspring-DEMO-integralcf-regular.otf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'satoshi';
+}
+
+h1,
+h2,
+.logo {
+    font-family: 'integral';
+}
+
+:root {
+    --primary-color: #FFF;
+    --secondary-color: #000;
+}
+
+.container {
+    width: 100%;
+}
+
+.logo {
+    color: black;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* HEADER BEGIN */
+header {
+    .top-header {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color: var(--primary-color);
+        background-color: var(--secondary-color);
+        padding: 18px 100px;
+        position: relative;
+
+        p {
+            font-size: 14px;
+
+            a {
+                color: white;
+                text-underline-offset: 3px;
+                transition: all ease 0.2s;
+
+            }
+
+            a:hover {
+                color: #CCC;
+            }
+
+        }
+
+        button {
+            position: absolute;
+            right: 100px;
+            width: 20px;
+            height: 20px;
+            color: white;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 100px;
+
+        button {
+            display: none;
+            border: none;
+            background: transparent;
+        }
+
+        ul {
+            display: flex;
+            gap: 24px;
+            font-size: 16px;
+
+            li>a {
+                color: #000;
+            }
+
+            li>a:after {
+                content: "";
+            }
+        }
+
+        .search-form {
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            input {
+                padding: 12px 16px 12px 50px;
+                border-radius: 62px;
+                width: 577px;
+                height: 48px;
+                border: none;
+                background-color: #f0f0f0;
+            }
+
+            input::placeholder,
+            i {
+                color: rgba(0, 0, 0, 0.40);
+            }
+
+            i {
+                font-size: 24px;
+                border: none;
+                background-color: transparent;
+                position: absolute;
+                top: 12px;
+                left: 16px;
+            }
+
+        }
+
+        .header-button {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+
+            i {
+                font-size: 24px;
+                color: black;
+            }
+        }
+    }
+}
+
+/* HEADER END */
+
+
+
+/* FOOTER START */
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: 80px;
+    background-color: #F0F0F0;
+    position: relative;
+    width: 100%;
+    margin-top: 170px;
+
+
+    .newsletter {
+        padding: 36px 64px;
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--secondary-color);
+        border-radius: 20px;
+        height: 180px;
+        top: 0;
+        transform: translateY(-90px);
+        position: absolute;
+        left: 100px;
+        right: 100px;
+        width: auto;
+
+        h2 {
+            font-size: 40px;
+            color: var(--primary-color);
+            font-weight: 700;
+
+        }
+
+        form {
+            position: relative;
+
+            i {
+                position: absolute;
+                left: 18px;
+                top: 14px;
+                font-size: 24px;
+                color: rgba(0, 0, 0, 0.40);
+            }
+
+            input,
+            button {
+                width: 100%;
+                float: inline-end;
+                margin: 0 auto;
+                padding: 16px 12px;
+                border-radius: 62px;
+                border: none;
+                font-size: 16px;
+                margin: 0 auto;
+            }
+
+            input {
+                margin-bottom: 14px;
+                padding: 16px 12px 16px 50px;
+
+            }
+
+            input::placeholder {
+                color: rgba(0, 0, 0, 0.40);
+                font-weight: 400;
+            }
+
+            button {
+                display: flex;
+                justify-content: center;
+                font-weight: 500;
+                transition: all ease 0.2s;
+                cursor: pointer;
+            }
+
+            button:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .info-contact {
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+
+        .logo {
+            margin-bottom: 25px;
+        }
+
+        span {
+            margin-bottom: 35px;
+            font-size: 14px;
+            color: rgba(0, 0, 0, 0.60)
+        }
+
+        .social-group {
+            display: flex;
+            gap: 10px;
+
+            a {
+                text-align: center;
+                background-color: white;
+                width: 35px;
+                height: 35px;
+                border: 1px solid gray;
+                border-radius: 50%;
+                padding: 8px;
+                font-size: 14px;
+                transition: all ease 0.2s;
+                cursor: pointer;
+                color: #000;
+            }
+
+            a:hover {
+                background-color: #000;
+                border: 1px solid #000;
+                color: #fff;
+
+            }
+        }
+    }
+
+    .info-group {
+        margin: 50px 0;
+        display: flex;
+        justify-content: space-between;
+
+        .company-info,
+        .help-info,
+        .faq-info,
+        .resources-info {
+            ul {
+                li {
+                    font-size: 16px;
+                    margin-bottom: 15px;
+
+                    p {
+                        margin-bottom: 26px;
+                    }
+
+                    a {
+                        color: rgba(0, 0, 0, 0.60);
+                        transition: all ease 0.2s;
+                    }
+
+                    a:hover {
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+
+    .reserve-right {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 24px;
+
+        span {
+            color: rgba(0, 0, 0, 0.60);
+            font-size: 14px;
+
+        }
+
+        .payment-methods {
+            button {
+                width: 46px;
+                height: 30px;
+                padding: 0;
+                cursor: pointer;
+                border: none;
+                margin: 0 12px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    transform: scale(2);
+                }
+            }
+        }
+    }
+}
+
+/* FOOTER END */
+
+
+
+
+
+
+/* Desktop nhỏ (laptop nhỏ) */
+@media (max-width: 1200px) {
+    header {
+        display: block;
+        position: relative;
+
+        .logo {
+            font-size: 25px;
+        }
+
+        .top-header {
+            padding: 20px 18px;
+
+            p>a {
+                text-decoration: underline;
+            }
+
+            button {
+                display: none;
+            }
+        }
+
+        nav {
+            padding: 20px;
+            position: relative;
+
+            .logo-group {
+                display: flex;
+                gap: 10px;
+                align-items: baseline;
+
+                i {
+                    font-size: 25px;
+                }
+            }
+
+            button {
+                display: block;
+            }
+
+            #nav-sidebar {
+                position: fixed;
+                left: 0;
+                top: 0;
+                height: 100vh;
+                width: 100vw;
+                background: rgba(0, 0, 0, 0.9);
+                transform: translateX(-100%);
+                transition: transform 0.3s;
+                z-index: 999;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                padding: 40px;
+
+                li>a,
+                button {
+                    color: #fff;
+                }
+            }
+
+            #nav-sidebar.show {
+                transform: translateX(0);
+            }
+
+            .sidebar-overlay {
+                display: none;
+                position: fixed;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.3);
+                z-index: 1000;
+            }
+
+            .sidebar-overlay.active {
+                display: block;
+            }
+
+            .search-form {
+                display: none;
+                /* Thêm style cho vị trí nếu muốn */
+                position: absolute;
+                top: 60px;
+                right: 40px;
+                background: #fff;
+                padding: 12px 16px;
+                border-radius: 10px;
+                box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
+                z-index: 100;
+            }
+
+            .search-form.show {
+                display: block;
+            }
+
+        }
+    }
+
+    footer {
+        padding: 80px 16px;
+
+        .newsletter {
+            left: 150px;
+            right: 150px;
+            flex-wrap: wrap;
+            height: fit-content;
+            padding: 20px;
+            gap: 10px;
+            justify-content: center;
+            transform: translateY(-60%);
+            align-items: center;
+
+            h2 {
+                font-size: 32px;
+
+            }
+        }
+
+
+    }
+}
+
+/* Tablet (iPad dọc/ngang) */
+@media (max-width: 991px) {
+    header {
+        display: block;
+        position: relative;
+
+        .logo {
+            font-size: 25px;
+        }
+
+        .top-header {
+            padding: 20px 18px;
+
+            p>a {
+                text-decoration: underline;
+            }
+
+            button {
+                display: none;
+            }
+        }
+
+        nav {
+            padding: 20px;
+            position: relative;
+
+            .logo-group {
+                display: flex;
+                gap: 10px;
+                align-items: baseline;
+
+                i {
+                    font-size: 25px;
+                }
+            }
+
+            button {
+                display: block;
+            }
+
+            #nav-sidebar {
+                position: fixed;
+                left: 0;
+                top: 0;
+                height: 100vh;
+                width: 100vw;
+                background: rgba(0, 0, 0, 0.9);
+                transform: translateX(-100%);
+                transition: transform 0.3s;
+                z-index: 999;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                padding: 40px;
+
+                li>a,
+                button {
+                    color: #fff;
+                }
+            }
+
+            #nav-sidebar.show {
+                transform: translateX(0);
+            }
+
+            .sidebar-overlay {
+                display: none;
+                position: fixed;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.3);
+                z-index: 1000;
+            }
+
+            .sidebar-overlay.active {
+                display: block;
+            }
+
+            .search-form {
+                display: none;
+                /* Thêm style cho vị trí nếu muốn */
+                position: absolute;
+                top: 60px;
+                right: 40px;
+                background: #fff;
+                padding: 12px 16px;
+                border-radius: 10px;
+                box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
+                z-index: 100;
+            }
+
+            .search-form.show {
+                display: block;
+            }
+
+        }
+    }
+
+    footer {
+        padding: 0 16px 80px 16px;
+
+        .newsletter {
+            left: 100px;
+            right: 100px;
+            flex-wrap: wrap;
+            height: fit-content;
+            padding: 20px;
+            gap: 10px;
+            justify-content: center;
+            transform: translateY(-50%);
+
+            h2 {
+                font-size: 32px;
+            }
+
+            form {
+
+                input,
+                button {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .info-group {
+            justify-content: start;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 150px;
+
+            .info-contact {
+                width: 100%;
+
+                span {
+                    width: 100%;
+                }
+            }
+
+            .company-info,
+            .help-info,
+            .faq-info,
+            .resources-info {
+                flex: 1 1 40%;
+            }
+        }
+
+        .reserve-right {
+            flex-direction: column;
+            gap: 40px;
+
+            span {
+                text-align: center;
+            }
+
+            .payment-methods {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 10px;
+
+                button {
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}
+
+
+/* Mobile (điện thoại) */
+@media (max-width: 575px) {
+
+    header {
+        display: block;
+        position: relative;
+
+        .logo {
+            font-size: 25px;
+        }
+
+        .top-header {
+            padding: 20px 18px;
+
+            p>a {
+                text-decoration: underline;
+            }
+
+            button {
+                display: none;
+            }
+        }
+
+        nav {
+            padding: 20px;
+            position: relative;
+
+            .logo-group {
+                display: flex;
+                gap: 10px;
+                align-items: baseline;
+
+                i {
+                    font-size: 25px;
+                }
+            }
+
+            button {
+                display: block;
+            }
+
+            #nav-sidebar {
+                position: fixed;
+                left: 0;
+                top: 0;
+                height: 100vh;
+                width: 100vw;
+                background: rgba(0, 0, 0, 0.9);
+                transform: translateX(-100%);
+                transition: transform 0.3s;
+                z-index: 999;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                padding: 40px;
+
+                li>a,
+                button {
+                    color: #fff;
+                }
+            }
+
+            #nav-sidebar.show {
+                transform: translateX(0);
+            }
+
+            .sidebar-overlay {
+                display: none;
+                position: fixed;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.3);
+                z-index: 1000;
+            }
+
+            .sidebar-overlay.active {
+                display: block;
+            }
+
+            .search-form {
+                display: none;
+                /* Thêm style cho vị trí nếu muốn */
+                position: absolute;
+                top: 60px;
+                right: 40px;
+                background: #fff;
+                padding: 12px 16px;
+                border-radius: 10px;
+                box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
+                z-index: 100;
+            }
+
+            .search-form.show {
+                display: block;
+            }
+
+        }
+    }
+
+    footer {
+        padding: 80px 16px;
+
+        .newsletter {
+            left: 10px;
+            right: 10px;
+            flex-wrap: wrap;
+            height: fit-content;
+            padding: 20px;
+            gap: 10px;
+            justify-content: center;
+            transform: translateY(-50%);
+
+            h2 {
+                font-size: 32px;
+            }
+
+            form {
+
+                input,
+                button {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .info-group {
+            justify-content: start;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            .info-contact {
+                width: 100%;
+
+                span {
+                    width: 100%;
+                }
+            }
+
+            .company-info,
+            .help-info,
+            .faq-info,
+            .resources-info {
+                flex: 1 1 40%;
+            }
+
+
+        }
+
+        .reserve-right {
+            flex-direction: column;
+            gap: 40px;
+
+            span {
+                text-align: center;
+            }
+
+            .payment-methods {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 10px;
+
+                button {
+                    width: 100%;
+                    height: 100%;
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+
+}

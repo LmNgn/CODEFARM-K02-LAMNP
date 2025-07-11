@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Product detail</title>
+        <link rel="shortcut icon" href="./assets/images/favicon-32x32.png"
+            type="image/x-icon">
+        <!-- fontawesome -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+        <!-- css -->
+        <link rel="stylesheet" href="./assets/styles/common.css">
+        <link rel="stylesheet" href="./assets/styles/product-detail.css">
+    </head>
+    <body>
+        <div class="container">
+            <!-- header start-->
+            <header>
+                <div class="top-header">
+                    <p>Sign up and get 20% off to your first order. <a
+                            href="signup">Sign Up Now</a></p>
+                    <button>x</button>
+                </div>
+                <nav>
+                    <div class="logo-group">
+                        <button type="button" id="menu-btn"><i
+                                class="fa-solid fa-bars"></i></button>
+                        <a class="logo" href="/">SHOP.CO</a>
+                    </div>
+                    <ul id="nav-sidebar">
+                        <li><a href="/shop">Shop</a></li>
+                        <li><a href="/sale">On Sale</a></li>
+                        <li><a href="/new-arrival">New Arrivals</a></li>
+                        <li><a href="/brand">Brand</a></li>
+                        <button id="close-btn">Close</button>
+
+                    </ul>
+                    <form action="/" class="search-form" id="searchForm">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" name="search" id="search-input"
+                            placeholder="Search for products...">
+                    </form>
+                    <div class="header-button">
+                        <button id="showSearchBtn" type="button">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <a href="/cart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                        <a href="/profile">
+                            <i class="fa-regular fa-circle-user"></i>
+                        </a>
+                    </div>
+                </nav>
+            </header>
+            <!-- header end -->
+            <hr class="seperator">
+
+            <!-- breadcrum  start -->
+            <section id="bread-crumb">
+                <h2>Breadcrumb</h2>
+                <div class="crumb-content">
+                    <p>
+                        <a href="/">Home</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" viewBox="0 0 16 16" fill="none">
+                            <path
+                                d="M6.53073 2.46937L11.5307 7.46937C11.6007 7.53905 11.6561 7.62184 11.694 7.71301C11.7318 7.80417 11.7513 7.90191 11.7513 8.00062C11.7513 8.09933 11.7318 8.19707 11.694 8.28824C11.6561 8.3794 11.6007 8.46219 11.5307 8.53187L6.53073 13.5319C6.38984 13.6728 6.19874 13.7519 5.99948 13.7519C5.80023 13.7519 5.60913 13.6728 5.46823 13.5319C5.32734 13.391 5.24818 13.1999 5.24818 13.0006C5.24818 12.8014 5.32734 12.6103 5.46823 12.4694L9.93761 8L5.46761 3.53062C5.32671 3.38973 5.24756 3.19863 5.24756 2.99937C5.24756 2.80011 5.32671 2.60902 5.46761 2.46812C5.60851 2.32723 5.7996 2.24807 5.99886 2.24807C6.19812 2.24807 6.38921 2.32723 6.53011 2.46812L6.53073 2.46937Z"
+                                fill="black" fill-opacity="0.6" />
+                        </svg>
+                        <a href="/">Shop</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" viewBox="0 0 16 16" fill="none">
+                            <path
+                                d="M6.53073 2.46937L11.5307 7.46937C11.6007 7.53905 11.6561 7.62184 11.694 7.71301C11.7318 7.80417 11.7513 7.90191 11.7513 8.00062C11.7513 8.09933 11.7318 8.19707 11.694 8.28824C11.6561 8.3794 11.6007 8.46219 11.5307 8.53187L6.53073 13.5319C6.38984 13.6728 6.19874 13.7519 5.99948 13.7519C5.80023 13.7519 5.60913 13.6728 5.46823 13.5319C5.32734 13.391 5.24818 13.1999 5.24818 13.0006C5.24818 12.8014 5.32734 12.6103 5.46823 12.4694L9.93761 8L5.46761 3.53062C5.32671 3.38973 5.24756 3.19863 5.24756 2.99937C5.24756 2.80011 5.32671 2.60902 5.46761 2.46812C5.60851 2.32723 5.7996 2.24807 5.99886 2.24807C6.19812 2.24807 6.38921 2.32723 6.53011 2.46812L6.53073 2.46937Z"
+                                fill="black" fill-opacity="0.6" />
+                        </svg>
+                        <a href="/">Men</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" viewBox="0 0 16 16" fill="none">
+                            <path
+                                d="M6.53073 2.46937L11.5307 7.46937C11.6007 7.53905 11.6561 7.62184 11.694 7.71301C11.7318 7.80417 11.7513 7.90191 11.7513 8.00062C11.7513 8.09933 11.7318 8.19707 11.694 8.28824C11.6561 8.3794 11.6007 8.46219 11.5307 8.53187L6.53073 13.5319C6.38984 13.6728 6.19874 13.7519 5.99948 13.7519C5.80023 13.7519 5.60913 13.6728 5.46823 13.5319C5.32734 13.391 5.24818 13.1999 5.24818 13.0006C5.24818 12.8014 5.32734 12.6103 5.46823 12.4694L9.93761 8L5.46761 3.53062C5.32671 3.38973 5.24756 3.19863 5.24756 2.99937C5.24756 2.80011 5.32671 2.60902 5.46761 2.46812C5.60851 2.32723 5.7996 2.24807 5.99886 2.24807C6.19812 2.24807 6.38921 2.32723 6.53011 2.46812L6.53073 2.46937Z"
+                                fill="black" fill-opacity="0.6" />
+                        </svg>
+                        <span>T-shirt</span>
+                    </p>
+                </div>
+            </section>
+            <!-- breadcrum end -->
+
+            <!-- main content start -->
+            <section id="product-detail">
+                <div class="image-list">
+                    <img src="./assets//images/image-11.png" alt="pic1">
+                    <img src="./assets//images/image-11.png" alt="pic1">
+                    <img src="./assets//images/image-11.png" alt="pic1">
+
+                </div>
+                <div class="current-display">
+                    <img src="./assets//images/image-11.png" alt="pic1">
+                </div>
+                <div class="product-manage">
+                    <h1>One Life Graphic T-shirt</h1>
+                    <div class="reviews">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p><span>5</span>/5</p>
+                    </div>
+                    <div class="price">
+                        <p class="current-price">$260</p>
+                        <span class="old-price">$230</span>
+                        <span class="discount-badge">-40%</span>
+                    </div>
+                    <div class="description">
+                        <p>This graphic t-shirt which is perfect for any
+                            occasion. Crafted from a soft and breathable fabric,
+                            it offers superior comfort and style.</p>
+                    </div>
+                    <hr>
+                    <div class="colors">
+                        <p>Select colors</p>
+                        <div class="list">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="37"
+                                height="37" viewBox="0 0 37 37" fill="none">
+                                <circle cx="18.5" cy="18.5" r="18.5"
+                                    fill="#314F4A" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="37"
+                                height="37" viewBox="0 0 37 37" fill="none">
+                                <circle cx="18.5" cy="18.5" r="18.5"
+                                    fill="#314F4A" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="37"
+                                height="37" viewBox="0 0 37 37" fill="none">
+                                <circle cx="18.5" cy="18.5" r="18.5"
+                                    fill="#314F4A" />
+                            </svg>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="sizes">
+                        <p>Choose Size</p>
+                        <div class="list">
+                            <button>Small</button>
+                            <button>Medium</button>
+                            <button>Large</button>
+                            <button>X-Large</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="btn-group">
+                        <div class="quanty-btn">
+                            <button class="plus"><i
+                                    class="fa-solid fa-plus"></i></button>
+                            <input id="product-sum" type="text">
+                            <button class="minus"><i
+                                    class="fa-solid fa-minus"></i></button>
+                        </div>
+                        <button class="add-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- customer review start-->
+            <section id="product-nav">
+                <h2>Product nav</h2>
+                <button>Product Details</button>
+                <button>Rating & Reviews</button>
+                <button>FAQs</button>
+            </section>
+            <section id="customer-review">
+                <div class="list-header">
+                    <h2>All Reviews <span>(451)</span></h2>
+                    <div class="button-group">
+                        <button>
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                        <button>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="review-list">
+                    <div class="review">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="customer-name">
+                            <p>Sarah M.</p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                        <div class="detail-review">
+                            <p>
+                                "I'm blown away by the quality and style of
+                                the
+                                clothes I received from Shop.co. From casual
+                                wear to elegant dresses, every piece I've
+                                bought
+                                has exceeded my expectations.”
+                            </p>
+                        </div>
+                        <span class="date">Posted on August 16, 2023</span>
+                    </div>
+                    <div class="review">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="customer-name">
+                            <p>Sarah M.</p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                        <div class="detail-review">
+                            <p>
+                                "I'm blown away by the quality and style of
+                                the
+                                clothes I received from Shop.co. From casual
+                                wear to elegant dresses, every piece I've
+                                bought
+                                has exceeded my expectations.”
+                            </p>
+                        </div>
+                        <span class="date">Posted on August 16, 2023</span>
+                    </div>
+                    <div class="review">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="customer-name">
+                            <p>Sarah M.</p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                        <div class="detail-review">
+                            <p>
+                                "I'm blown away by the quality and style of
+                                the
+                                clothes I received from Shop.co. From casual
+                                wear to elegant dresses, every piece I've
+                                bought
+                                has exceeded my expectations.”
+                            </p>
+                        </div>
+                        <span class="date">Posted on August 16, 2023</span>
+                    </div>
+                    <div class="review">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="customer-name">
+                            <p>Sarah M.</p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                        <div class="detail-review">
+                            <p>
+                                "I'm blown away by the quality and style of
+                                the
+                                clothes I received from Shop.co. From casual
+                                wear to elegant dresses, every piece I've
+                                bought
+                                has exceeded my expectations.”
+                            </p>
+                        </div>
+                        <span class="date">Posted on August 16, 2023</span>
+                    </div>
+                </div>
+                <button class="load-more">Load more reviews</button>
+            </section>
+            <!-- customer review end-->
+            <!-- best selling start -->
+            <section id="alike">
+                <h2>YOU MIGHT ALSO LIKE</h2>
+                <div class="product-carousel">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="./assets/images/shirt-1.png"
+                                alt="shirt">
+                        </div>
+                        <div class="product-info">
+                            <p>t-shirt with tape detail</p>
+                            <div class="reviews">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>5/5</span>
+                            </div>
+                            <div class="prices">
+                                <span class="current-price">$120</span>
+                                <span class="old-price">$120</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="./assets/images/image-18.png"
+                                alt="shirt">
+                        </div>
+                        <div class="product-info">
+                            <p>t-shirt with tape detail</p>
+                            <div class="reviews">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>5/5</span>
+                            </div>
+                            <div class="prices">
+                                <span class="current-price">$120</span>
+                                <span class="old-price">$120</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="./assets/images/image-7.png"
+                                alt="shirt">
+                        </div>
+                        <div class="product-info">
+                            <p>t-shirt with tape detail</p>
+                            <div class="reviews">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>5/5</span>
+                            </div>
+                            <div class="prices">
+                                <span class="current-price">$120</span>
+                                <span class="old-price">$120</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="./assets/images/image-10.png"
+                                alt="shirt">
+                        </div>
+                        <div class="product-info">
+                            <p>t-shirt with tape detail</p>
+                            <div class="reviews">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>5/5</span>
+                            </div>
+                            <div class="prices">
+                                <span class="current-price">$120</span>
+                                <span class="old-price">$120</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- best selling end -->
+            <!-- main content end -->
+
+            <!-- footer start -->
+            <footer>
+                <div class="newsletter">
+                    <h2>STAY UPTO DATE ABOUT <br /> OUR LATEST OFFERS</h2>
+                    <form action="/newsletter" class="newsletter-form">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="text" id="user-email"
+                            placeholder="Enter your email address">
+                        <button type="submit">Subscribe to Newsletter</button>
+                    </form>
+                </div>
+                <div class="info-group">
+                    <div class="info-contact">
+                        <a href="/" class="logo">SHOP.CO</a>
+                        <span>We have clothes that suits your style and which
+                            you’re
+                            proud to wear. From women to men.</span>
+
+                        <div class="social-group">
+                            <a href="/twitter"><i
+                                    class="fa-brands fa-x-twitter"></i></a>
+                            <a href="/facebook"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="/instagram"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="/github"><i
+                                    class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="company-info">
+                        <ul>
+                            <li>
+                                <p>COMPANY</p>
+                            </li>
+                            <li><a href="/about">About</a></li>
+                            <li><a href="/feature">Feature</a></li>
+                            <li><a href="/works">Works</a></li>
+                            <li><a href="/career">Career</a></li>
+                        </ul>
+                    </div>
+                    <div class="help-info">
+                        <ul>
+                            <li>
+                                <p>HELP</p>
+                            </li>
+                            <li><a href="/about">Customer Support</a></li>
+                            <li><a href="/feature">Delivery Details</a></li>
+                            <li><a href="/works">Terms & Conditions</a></li>
+                            <li><a href="/career">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="faq-info">
+                        <ul>
+                            <li>
+                                <p>FAQ</p>
+                            </li>
+                            <li><a href="/about">Account</a></li>
+                            <li><a href="/feature">Manage Deliveries</a></li>
+                            <li><a href="/works">Orders</a></li>
+                            <li><a href="/career">Payments</a></li>
+                        </ul>
+                    </div>
+                    <div class="resources-info">
+                        <ul>
+                            <li>
+                                <p>RESOURCES</p>
+                            </li>
+                            <li><a href="/about">Free eBooks</a></li>
+                            <li><a href="/feature">Development Tutorial</a></li>
+                            <li><a href="/works">How to - Blog</a></li>
+                            <li><a href="/career">Youtube Playlist</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <div class="reserve-right">
+                    <span>Shop.co © 2000-2023, All Rights Reserved</span>
+                    <div class="payment-methods">
+                        <button><img src="./assets/images/Badge.svg"
+                                alt="visa"></button>
+                        <button><img src="./assets/images/MC.svg"
+                                alt="mastercard"></button>
+                        <button><img
+                                src="./assets/images/PP.svg"
+                                alt="paypal"></button>
+                        <button><img
+                                src="./assets/images/app.svg"
+                                alt="apple-pay"></button>
+                        <button><img src="./assets/images/GP.svg"
+                                alt="google-pay"></button>
+                    </div>
+                </div>
+            </footer>
+            <!-- footer end -->
+        </div>
+    </body>
+    <script src="./assets/js/index.js"></script>
+</html>
