@@ -137,7 +137,6 @@ function insertNumber(arr, num) {
 
 }
 
-// Output:
 function startInserNumber() {
     insertNumber([1, 3, 5, 7, 9], 6); // Output: [1, 3, 5, 6, 7, 9]
     insertNumber([3, "hello", 1, NaN, 4, null], 2); // Output: [1, 2, 3, 4]
