@@ -68,11 +68,11 @@ const users = [
 ];
 function sortUsersByName(users) {
     return users.sort((a, b) => {
-        const nameA = a.fullName.trim().split(" ").reverse().join(" ");
-        const nameB = b.fullName.trim().split(" ").reverse().join(" ");
+        const n1 = a.fullName.trim().split(" ").reverse().join(" ");
+        const n2 = b.fullName.trim().split(" ").reverse().join(" ");
 
-        if (nameA < nameB) return -1;
-        if (nameA > nameB) return 1;
+        if (n1 < n2) return -1;
+        if (n1 > n2) return 1;
         return 0;
     });
 }
