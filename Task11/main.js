@@ -58,7 +58,7 @@ const collapseSelect = document.getElementById("collapseStyle");
 dataTable.classList.add("solid");
 
 borderSelect.addEventListener("change", function () {
-    dataTable.className = this.value; // chỉ giữ class viền
+    dataTable.className = this.value;
 });
 
 collapseSelect.addEventListener("change", function () {
