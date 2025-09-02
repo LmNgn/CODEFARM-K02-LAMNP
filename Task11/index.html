@@ -1,0 +1,49 @@
+ <!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Task 11</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="light-mode">
+        <div class="container">
+            <header class="title">
+                <h1>Task 11</h1>
+
+                <p>Ôn tập DOM cơ bản, HTML, CSS</p>
+            </header>
+            <button onclick="toggleMode()">Chuyển chế
+                độ</button>
+            <section class="main-content">
+                <div class="task2">
+                    <h2>Data table</h2>
+                    <select id="borderStyle">
+                        <option value="solid">Solid</option>
+                        <option value="double">Double</option>
+                        <option value="groove">Groove</option>
+                        <option value="ridge">Ridge</option>
+                        <option value="dashed">Dashed</option>
+                        <option value="dotted">Dotted</option>
+                    </select>
+                    <select id="collapseStyle">
+                        <option value="collapse">Collapse</option>
+                        <option value="separate">Separate</option>
+                    </select>
+                    <table id="dataTable"></table>
+                </div>
+                <div class="task3">
+                    <h2>Words count</h2>
+                    <textarea
+                        id="textInput"
+                        maxlength="200"
+                        placeholder="Nhập đoạn văn bản (tối đa 200 ký tự)..."></textarea>
+                    <div id="wordCount">Số từ: 0</div>
+                    <div id="charCount">Số ký tự còn lại: 200</div>
+                </div>
+            </section>
+            <footer>@2025 Made by Lam</footer>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
