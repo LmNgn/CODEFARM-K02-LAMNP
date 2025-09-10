@@ -1,0 +1,26 @@
+{
+  "name": "codefarm-k02-lamnp",
+  "version": "1.0.0",
+  "description": "codefarm homework",
+  "main": "index.html",
+  "scripts": {
+    "dev": "json-server --watch db.json --port 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LmNgn/CODEFARM-K02-LAMNP.git"
+  },
+  "keywords": [
+    "cf.",
+    "codefarm."
+  ],
+  "author": "lamnp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LmNgn/CODEFARM-K02-LAMNP/issues"
+  },
+  "homepage": "https://github.com/LmNgn/CODEFARM-K02-LAMNP#readme",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}
