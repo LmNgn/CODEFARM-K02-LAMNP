@@ -3,22 +3,41 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Task 13</title>
+        <title>Product Catalog</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <form id="search-form">
-            <input type="text" id="search" placeholder="Search products..." />
-        </form>
-        <select id="sort-product">
-            <option value>View all</option>
-            <option value="price-asc">Price: Low to High</option>
-            <option value="price-dsc">Price: High to Low</option>
-            <option value="name-asc">Name: A to Z</option>
-            <option value="name-dsc">Name: Z to A</option>
-        </select>
-        <form id="filters-form">
-        </form>
-        <section id="product-list"></section>
+        <header>
+            <h1>Product Catalog</h1>
+        </header>
+
+        <main class="container">
+            <div class="controls">
+                <form id="search-form" class="search-form">
+                    <input type="text" id="search"
+                        placeholder="Search products..." />
+                    <button type="submit">Search</button>
+                </form>
+
+                <select id="sort-product" class="sort-select">
+                    <option>Select sort</option>
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="price-dsc">Price: High to Low</option>
+                    <option value="name-asc">Name: A to Z</option>
+                    <option value="name-dsc">Name: Z to A</option>
+                </select>
+            </div>
+
+            <div class="content">
+                <aside class="filters">
+                    <h3>Filters</h3>
+                    <form id="filters-form"></form>
+                </aside>
+
+                <section id="product-list" class="product-grid"></section>
+            </div>
+        </main>
+
         <script src="./main.js"></script>
     </body>
 </html>
